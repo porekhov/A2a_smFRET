@@ -1,1 +1,20 @@
-to be competed
+Supplimentary materials for "Sub-millisecond conformational dynamics of the A2A adenosine receptor revealed by single-molecule FRET", Maslov et al.
+
+1. Molecular dynamics trajectories
+
+Starting configurations (residue ATT corresponds to the Atto647N label, ALX – to the Alexa488 label) and trajectories of production molecular dynamics simulations (1 us each with frames written every 1 ns, i.e. 1000 frames in total):
+A2AAR in the inactive state (amino acids 3-316) based on the 3PWH PDB entry, https://www.rcsb.org/structure/3PWH, with two alternative labeling variants:
+
+-	inactive_ATT225_ALX310.pdb – Atto647N attached to L225C/6.27, and Alexa488 attached to Q310C/8.65 + three trajectories (inactive_1.xtc, inactive_2.xtc, and inactive_3.xtc)
+-	inactive_ALX225_ATT310_alt.pdb – Alexa488 attached to L225C/6.27, and Atto647N attached to Q310C/8.65 + three trajectories (inactive_1_alt.xtc, inactive_2_alt.xtc, and inactive_3_alt.xtc)
+
+A2AAR in the active state based on the 5G53 PDB entry, https://www.rcsb.org/structure/5G53, with two alternative labeling variants:
+
+-	active_ATT225_ALX310.pdb – Atto647N attached to L225C/6.27, and Alexa488 attached to Q310C/8.65 + three trajectories (active_1.xtc, active_2.xtc, and active_3.xtc)
+-	active_ALX225_ATT310_alt.pdb – Alexa488 attached to L225C/6.27, and Atto647N attached to Q310C/8.65 + three trajectories (active_1_alt.xtc, active_2_alt.xtc, and active_3_alt.xtc)
+
+2. calculate_label_volume_MD.py, script for estimation of the volume accessible for a fluorescent label
+
+The accessible volume over the trajectory is estimated based on the Monte Carlo approach. A set of random points is generated in the rectangular box enclosing the label. The volume is further obtained as the box volume multiplied by the ratio of the number of points found in vicinity of the label to the total number of points, Vacc = Vbox x (N_near_label/N_total)
+
+
